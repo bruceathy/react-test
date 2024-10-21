@@ -1,6 +1,7 @@
 .card {
-  height: 200px;
+  height: 400px;
+  width: 300px;
   background-color: #451e22;
-  border-radius: 5px;
+  border-radius: 8px;
   text-align: center;
 }
