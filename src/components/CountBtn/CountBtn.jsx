@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./CountBtn.css";
 
-function CountBtn() {
+export default function CountBtn() {
   const [count, setCount] = useState(0);
 
   return (
@@ -10,5 +10,3 @@ function CountBtn() {
     </button>
   );
 }
-
-export default CountBtn;

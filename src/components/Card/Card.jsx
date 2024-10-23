@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import "./Card.css";
 
-function Card(props) {
+export default function Card(props) {
   return (
     <div className="card">
       <h1>{props.name}</h1>
@@ -9,5 +9,3 @@ function Card(props) {
     </div>
   );
 }
-
-export default Card;

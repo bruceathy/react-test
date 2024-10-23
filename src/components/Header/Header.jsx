@@ -3,7 +3,7 @@ import viteLogo from "/vite.svg";
 import "./Header.css";
 import CountBtn from "../CountBtn/CountBtn";
 
-function Header() {
+export default function Header() {
   return (
     <header>
       <div className="logo-container">
@@ -19,5 +19,3 @@ function Header() {
     </header>
   );
 }
-
-export default Header;
