@@ -30,10 +30,10 @@ function App() {
       <section className="examples">
         <h2>Examples</h2>
         <menu>
-          <TabBtn />
-          <TabBtn />
-          <TabBtn />
-          <TabBtn />
+          <TabBtn>Components</TabBtn>
+          <TabBtn>JSX</TabBtn>
+          <TabBtn>Props</TabBtn>
+          <TabBtn>State</TabBtn>
         </menu>
       </section>
     </div>

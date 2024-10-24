@@ -1,7 +1,11 @@
-export default function TabBtn() {
+/* eslint-disable react/prop-types */
+export default function TabBtn({ children }) {
+  function handleClick() {
+    alert("clicked");
+  }
   return (
     <li>
-      <button>Tab 1</button>
+      <button onClick={handleClick}>{children}</button>
     </li>
   );
 }
