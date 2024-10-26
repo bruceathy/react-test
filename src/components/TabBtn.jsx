@@ -1,11 +1,8 @@
 /* eslint-disable react/prop-types */
-export default function TabBtn({ children }) {
-  function handleClick() {
-    alert("clicked");
-  }
+export default function TabBtn({ children, onSelect }) {
   return (
     <li>
-      <button onClick={handleClick}>{children}</button>
+      <button onClick={onSelect}>{children}</button>
     </li>
   );
 }
