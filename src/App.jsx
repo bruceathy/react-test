@@ -5,8 +5,8 @@ import Card from "./components/Card/Card";
 import TabBtn from "./components/TabBtn";
 
 function App() {
-  function handleSelect() {
-    alert("Hello World");
+  function handleSelect(selectedBtn) {
+    alert(`${selectedBtn}`);
   }
 
   return (
@@ -34,11 +34,16 @@ function App() {
       <section className="examples">
         <h2>Examples</h2>
         <menu>
-          <TabBtn onSelect={handleSelect}>Components</TabBtn>
-          <TabBtn onSelect={handleSelect}>JSX</TabBtn>
-          <TabBtn onSelect={handleSelect}>Props</TabBtn>
-          <TabBtn onSelect={handleSelect}>State</TabBtn>
+          <TabBtn onSelect={() => handleSelect("Components")}>
+            Components
+          </TabBtn>
+          <TabBtn onSelect={() => handleSelect("JSX")}>JSX</TabBtn>
+          <TabBtn onSelect={() => handleSelect("Props")}>Props</TabBtn>
+          <TabBtn onSelect={() => handleSelect("State")}>State</TabBtn>
         </menu>
+        <div className="example">
+          <h3>Dynamic content</h3>
+        </div>
       </section>
     </div>
   );
