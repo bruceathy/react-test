@@ -1,12 +1,15 @@
+import { useState } from "react";
 import "./App.css";
 import { CORE_CONCEPTS } from "./data";
+import { EXAMPLES } from "./data";
 import Header from "./components/Header/Header";
 import Card from "./components/Card/Card";
 import TabBtn from "./components/TabBtn";
 
 function App() {
-  function handleSelect(selectedBtn) {
-    alert(`${selectedBtn}`);
+  const [selectedTopic, setSelectedTopic] = useState("components");
+  function handleSelect(selectedTopic) {
+    setSelectedTopic(selectedTopic);
   }
 
   return (
@@ -34,15 +37,17 @@ function App() {
       <section className="examples">
         <h2>Examples</h2>
         <menu>
-          <TabBtn onSelect={() => handleSelect("Components")}>
+          <TabBtn onSelect={() => handleSelect("components")}>
             Components
           </TabBtn>
-          <TabBtn onSelect={() => handleSelect("JSX")}>JSX</TabBtn>
-          <TabBtn onSelect={() => handleSelect("Props")}>Props</TabBtn>
-          <TabBtn onSelect={() => handleSelect("State")}>State</TabBtn>
+          <TabBtn onSelect={() => handleSelect("jsx")}>JSX</TabBtn>
+          <TabBtn onSelect={() => handleSelect("props")}>Props</TabBtn>
+          <TabBtn onSelect={() => handleSelect("state")}>State</TabBtn>
         </menu>
-        <div className="example">
-          <h3>Dynamic content</h3>
+        <div className="topic-container">
+          <h3>{EXAMPLES[selectedTopic].title}</h3>
+          <p>{EXAMPLES[selectedTopic].description}</p>
+          <code>{EXAMPLES[selectedTopic].code}</code>
         </div>
       </section>
     </div>
