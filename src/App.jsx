@@ -15,22 +15,13 @@ function App() {
     <div>
       <Header />
       <section>
-        <Card
-          name={CORE_CONCEPTS[0].title}
-          text={CORE_CONCEPTS[0].description}
-        />
-        <Card
-          name={CORE_CONCEPTS[1].title}
-          text={CORE_CONCEPTS[1].description}
-        />
-        <Card
-          name={CORE_CONCEPTS[2].title}
-          text={CORE_CONCEPTS[2].description}
-        />
-        <Card
-          name={CORE_CONCEPTS[3].title}
-          text={CORE_CONCEPTS[3].description}
-        />
+        {CORE_CONCEPTS.map((concept) => (
+          <Card
+            key={concept.title}
+            name={concept.title}
+            text={concept.description}
+          />
+        ))}
       </section>
 
       <section className="examples">
