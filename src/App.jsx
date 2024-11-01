@@ -12,7 +12,7 @@ function App() {
   }
 
   return (
-    <div>
+    <>
       <Header />
       <section>
         {CORE_CONCEPTS.map((concept) => (
@@ -61,7 +61,7 @@ function App() {
           </div>
         )}
       </section>
-    </div>
+    </>
   );
 }
 
